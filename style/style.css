@@ -56,17 +56,12 @@ table {
 #abc {
 
 }*/
-/* 余計な隙間をすべてリセット */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .siteHeader {
-  background-color: #1a1a1a !important; 
+  background-color:　rgba(0, 0, 0 80); 
   width: 100%;
-  padding: 10px 0; /* 20pxから10pxに減らしてスリムに */
+  padding: 0px 40px; 
+  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
 }
 
 .headerInner {
