@@ -58,7 +58,7 @@ table {
 }*/
 
 .siteHeader {
-  background-color:　rgba(0, 0, 0 80); 
+  background-color:rgba(0,0,0,0.8); 
   width: 100%;
   padding: 0px 40px; 
   /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
@@ -156,12 +156,12 @@ table {
 /* ご予約ボタン（塗りつぶし） */
 .btnReserve {
   background-color: #6b6d21; 
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* 空室カレンダーボタン（枠線） */
 .btnCalendar {
   border: 1px solid #ffffff; 
-  color: #ffffff !important;
+  color: #ffffff;
   background-color: transparent;
 }
