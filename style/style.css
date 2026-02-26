@@ -153,15 +153,10 @@ table {
   font-weight: 500;
 }
 
-/* ご予約ボタン（塗りつぶし） */
-.btnReserve {
-  background-color: #6b6d21; 
+/* ★ご予約ボタン：背景色と内側の余白 */
+.headerActions .btnReserve{
+  background-color: #78781E; /* つつじ亭のオリーブ色 */
   color: #ffffff;
-}
-
-/* 空室カレンダーボタン（枠線） */
-.btnCalendar {
-  border: 1px solid #ffffff; 
-  color: #ffffff;
-  background-color: transparent;
+  padding: 10px 15px; /* 上下10px、左右15pxで内側から押し広げる */
+  font-weight: bold;
 }
