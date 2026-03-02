@@ -143,7 +143,7 @@ table {
   align-items: center;
 }
 
-/* 4. ボタンの共通設定（まとめるのがプロの技） */
+/* 4. ボタンの共通設定 */
 .headerActions a {
   text-decoration: none;
   font-size: 14px;
@@ -159,4 +159,11 @@ table {
   color: #ffffff;
   padding: 10px 15px; /* 上下10px、左右15pxで内側から押し広げる */
   font-weight: bold;
+}
+
+/* --- 【個別】空室カレンダーボタン（枠線） --- */
+.headerActions .btnCalendar {
+  border: 1px solid #ffffff; /* 白い枠線 */
+  color: #ffffff;
+  background-color: transparent; /* 背景は透明 */
 }
