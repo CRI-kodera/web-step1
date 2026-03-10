@@ -99,7 +99,7 @@ table {
 }
 
 .headerNav a {
-  color: #ffffff !important; /* 文字の色を白にする */
+  color: #ffffff; /* 文字の色を白にする */
   text-decoration: none;    /* 下線を消す */
   font-size: 10px;          /* 文字の大きさ */
   font-weight: 500;         /* 文字の太さを少し出す */
