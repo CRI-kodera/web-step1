@@ -57,38 +57,28 @@ table {
 
 }*/
 
-.siteHeader {
+..siteHeader {
   background-color:rgba(0,0,0,0.8); 
   width: 100%;
-  padding: 0px 40px; 
+  padding: 12px 40px; 
   /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
+  color: fff;
 }
 
+/* 1. 全体のレイアウト：ロゴ・ナビ・ボタンを配置 */
 .headerInner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* space-between から変更（左詰めにする） */
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
+  /* 左詰めに設定（あとでナビに auto マージンをかけてボタンを飛ばすため） */
+  justify-content: flex-start;
 }
 
 /* ロゴのサイズをさらにコンパクトに */
-.headerLogo img {
-  height: 35px; /* ここを小さくすればヘッダーも薄くなります */
-  display: block;
-}
 .headerNav {
   /* ここでロゴとの距離を自由に調整できます */
   margin-left: 55px; /* 60px 離す。もっと近づけるなら 30px などに */
-  
-  /* もし右側の「予約ボタン」だけは右端に残したい場合は、これを追加 ↓ */
-  margin-right: auto; 
 }
+
 /* ナビゲーションのリストを横に並べる */
 .headerNav ul {
   display: flex;           /* 横並びにする */
@@ -112,25 +102,12 @@ table {
   width: auto;
 }
 
-
-/* 1. 全体のレイアウト：ロゴ・ナビ・ボタンを配置 */
-.headerInner {
-  display: flex;
-  align-items: center;
-  /* 左詰めに設定（あとでナビに auto マージンをかけてボタンを飛ばすため） */
-  justify-content: flex-start; 
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* 2. ナビゲーション：ロゴに近づけつつ、ボタンを右に押し出す */
-.headerNav {
+.headerNavigation {
   margin-left: 50px;  /* ロゴとの距離：お好みで調整 */
-  margin-right: auto; /* ★これが重要！右側のボタンを右端へ自動で飛ばします */
 }
 
-.headerNav ul {
+.headerNavigation ul {
   display: flex;
   list-style: none;
   gap: 30px;
@@ -141,6 +118,7 @@ table {
   display: flex;
   gap: 15px; /* ボタン同士の隙間 */
   align-items: center;
+  margin-left: auto;
 }
 
 /* 4. ボタンの共通設定 */
