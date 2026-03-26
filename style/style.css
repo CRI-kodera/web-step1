@@ -57,12 +57,12 @@ table {
 
 }*/
 
-..siteHeader {
+.siteHeader {
   background-color:rgba(0,0,0,0.8); 
   width: 100%;
   padding: 12px 40px; 
   /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
-  color: fff;
+  color: #ffffff;
 }
 
 /* 1. 全体のレイアウト：ロゴ・ナビ・ボタンを配置 */
@@ -74,7 +74,7 @@ table {
 }
 
 /* ロゴのサイズをさらにコンパクトに */
-.headerNav {
+.headerNavigation {
   /* ここでロゴとの距離を自由に調整できます */
   margin-left: 55px; /* 60px 離す。もっと近づけるなら 30px などに */
 }
