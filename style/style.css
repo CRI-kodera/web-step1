@@ -146,22 +146,6 @@ table {
   background-color: transparent; /* 背景は透明 */
 }
 
-/* 画像を画面の横幅いっぱいにする設定 */
-.mainVisual {
-  width: 100%;
-  height: 100vh; /* 画面の高さ100%分表示（お好みで 600px など固定でもOK） */
-  overflow: hidden;
-}
-
-.mainVisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 画像を隙間なく、比率を保って表示する魔法のプロパティ */
-  display: block;
-  /* center（横） 20%（縦の位置：数字を大きくすると画像が下に下がります） */
-  object-position: center 10%;
-}
-
 /* ヘッダーの設定（重なりの順序を確認） */
 .siteHeader {
   background-color: rgba(0, 0, 0, 0.8); /* 画像を見せるために少し透明度を上げると綺麗です */
@@ -171,3 +155,49 @@ table {
   width: 100%;
   z-index: 1000; /* 画像より上にくるように大きな数値を指定 */
 }
+
+/* 1. 親要素：ここを座標の「0」の地点にする */
+.mainVisual {
+  position: relative; 
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 2. 背景画像 */
+.mainVisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- メインビジュアル内のロゴ・タイトル調整 --- */
+
+.mainTitle {
+  position: absolute;
+  /* top: 150px; を少し調整して、画面中央付近に配置 */
+  top: 55%; 
+  left: 10%; /* 左端から少し離す */
+  transform: translateY(-50%); /* 縦方向の真ん中合わせ */
+  
+  /* 画像の大きさを調整 */
+  width: 25vw; /* 画面横幅の25%に設定（スマホ・PCで自動可変） */
+  min-width: 200px; /* 小さくなりすぎないようガード */
+  max-width: 400px; /* 大きくなりすぎないよう制限 */
+  
+  z-index: 10;
+  
+  /* 視認性を上げるための処理（任意） */
+  filter: drop-shadow(0 0 15px rgba(0,0,0,0.3));
+  
+  /* もし画像自体が少し傾いている、または動きをつけたい場合 */
+  transition: all 0.5s ease-out;
+}
+
+.mainTitle img {
+  width: 100%;
+  height: auto;
+  /* 画像がボケないように最適化 */
+  image-rendering: -webkit-optimize-contrast;
+}
+
