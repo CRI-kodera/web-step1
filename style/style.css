@@ -217,19 +217,60 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 画像の比率を保ちつつ画面いっぱいに広げる */
-  opacity: 0.3;      /* ★ここで「うっすら」具合を調整（0.1〜0.3がおすすめ） */
+ 
   z-index: 1;        /* 背面に配置 */
 }
 
-/* メッセージの制御 */
+/* 縦文字エリアの調整 */
 .conceptMessage {
-  position: relative; 
-  z-index: 2;        /* 画像より前に出す */
+  position: absolute; /* 自由な位置に配置するために absolute を使用 */
+  z-index: 2;
   color: #fff;
   writing-mode: vertical-rl; /* 縦書き */
   font-family: "serif";
-  font-size: 24px;
-  line-height: 2.8;
-  letter-spacing: 0.4em;
-  text-align: center;
+
+/* --- 提供いただいた座標を反映 --- */
+  left: 454px; /* X座標 */
+  top: 120px;  /* Y座標 */
+
+  /* --- 添付画像の数値を反映 --- */
+  width: 304px;   /* サイズ W */
+  height: 648px;  /* サイズ H */
+  line-height: 80px; /* 間隔 80 (行間として反映) */
+  
+  /* 文字自体の大きさ */
+  font-size: 28px; 
+  /* 文字同士の縦の間隔 */
+  letter-spacing: 0.5em; 
+  
+  /* エリア内での文字配置 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+}
+/* 横書き説明文のスタイル */
+.descriptionMessage {
+  position: absolute;
+  /* 縦書きの開始位置(X:454)に合わせるか、中央寄せにするか調整 */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Y座標：縦書き(Y:918) + 縦書きの高さ(648) + 余白 を考慮して設定 */
+  top: 500px; 
+
+  /* 添付画像のサイズを反映 */
+  width: 634px;
+  height: auto; /* 文章量に合わせて可変にするのが安全です */
+  
+  color: #fff;
+  font-family: "serif";
+  font-size: 16px; /* 説明文なので少し小さめに */
+  line-height: 2.2; /* 行間を広げて読みやすく */
+  text-align: center; /* 画像の通り中央揃え */
+  z-index: 2;
+}
+
+.descriptionMessage p {
+  margin-bottom: 0.5em; /* 行同士の適度な隙間 */
 }
