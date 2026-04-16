@@ -191,17 +191,10 @@ table {
   /* 画像がボケないように最適化 */
   image-rendering: -webkit-optimize-contrast;
 }
-/* --- 2枚目以降の画像（新規） --- */
-.subSection {
-  width: 100%;
-  padding: 80px 0; /* 画像の上下に少しゆとりを持たせると高級感が出ます */
-  background-color: #fff; /* 背景色は旅館の雰囲気に合わせて */
-}
 
 .subSection {
-  position: relative; /* 子要素の基準点 */
-  width: 100%;
-  height: 100vh;      /* 1画面分の高さを確保 */
+background-image: url("../image/main_bg.jpg");
+background-size: cover;
   background-color: #000; /* 画像が読み込まれるまでの待機色 */
   overflow: hidden;
   display: flex;
@@ -211,7 +204,6 @@ table {
 
 /* 背景画像の制御 */
 .subBgImage {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -223,25 +215,12 @@ table {
 
 /* 縦文字エリアの調整 */
 .conceptMessage {
-  position: absolute; /* 自由な位置に配置するために absolute を使用 */
   z-index: 2;
   color: #fff;
   writing-mode: vertical-rl; /* 縦書き */
   font-family: "serif";
 
-/* --- 提供いただいた座標を反映 --- */
-  left: 454px; /* X座標 */
-  top: 120px;  /* Y座標 */
-
-  /* --- 添付画像の数値を反映 --- */
-  width: 304px;   /* サイズ W */
-  height: 648px;  /* サイズ H */
   line-height: 80px; /* 間隔 80 (行間として反映) */
-  
-  /* 文字自体の大きさ */
-  font-size: 28px; 
-  /* 文字同士の縦の間隔 */
-  letter-spacing: 0.5em; 
   
   /* エリア内での文字配置 */
   display: flex;
@@ -251,17 +230,9 @@ table {
 }
 /* 横書き説明文のスタイル */
 .descriptionMessage {
-  position: absolute;
   /* 縦書きの開始位置(X:454)に合わせるか、中央寄せにするか調整 */
   left: 50%;
   transform: translateX(-50%);
-  
-  /* Y座標：縦書き(Y:918) + 縦書きの高さ(648) + 余白 を考慮して設定 */
-  top: 500px; 
-
-  /* 添付画像のサイズを反映 */
-  width: 634px;
-  height: auto; /* 文章量に合わせて可変にするのが安全です */
   
   color: #fff;
   font-family: "serif";
