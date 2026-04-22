@@ -258,9 +258,18 @@ table {
   margin-bottom: 60px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  
+}
   /* 余計な位置指定をリセット */
-  margin-left: 0;
+ { margin-left: 0;
+}
+/* 1. 大きな航空写真のコンテナ（ここは前回のまま） */
+.mainPhotoContainer {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 60px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* 航空写真自体（前回のまま） */
@@ -269,6 +278,9 @@ table {
   height: 100%;
   object-fit: cover;
 }
+
+
+
 /* 2. 下部の小さな画像・ロゴエリアのコンテナ（Flexboxで横並び） */
 .mediaLogosContainer {
   display: flex;
