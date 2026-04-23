@@ -192,7 +192,7 @@ table {
   image-rendering: -webkit-optimize-contrast;
 }
 
-.subSection {
+.mainSection {
   background-image: url("../image/main_bg.jpg");
   background-size: cover;
   background-position: center;
@@ -203,9 +203,9 @@ table {
   flex-direction: column; /* 縦書き(上)と横書き(下)を並べる */
   justify-content: center; /* 垂直方向の中央寄せ */
   align-items: center;     /* 水平方向の中央寄せ */
-  
+  gap: 80px;
   min-height: 100vh;       /* 画面いっぱいの高さを確保 */
-  padding: 100px 20px;     /* 上下にしっかり余白をとる */
+  padding: 150px 100px;     /* 上下にしっかり余白をとる */
   box-sizing: border-box;
 }
 
@@ -217,8 +217,6 @@ table {
   font-size: 40px;      /* 画像に合わせて大きめに設定 */
   line-height: 2.0;     /* 三行の間隔を調整 */
   letter-spacing: 0.3em; /* 文字の上下の間隔をあけてゆったりと */
-  margin-bottom: 80px;  /* 下の横書き文章との距離 */
-  
   height: auto;
   display: flex;
   flex-direction: column;
@@ -253,57 +251,27 @@ table {
 /* 1. 大きな航空写真のコンテナ */
 .mainPhotoContainer {
   width: 100%;
-  max-width: 1000px;      /* 大きさは元のままキープ */
-  aspect-ratio: 16 / 9;   /* 比率もキープ */
-  margin-bottom: 60px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-  /* 余計な位置指定をリセット */
- { margin-left: 0;
-}
-/* 1. 大きな航空写真のコンテナ（ここは前回のまま） */
-.mainPhotoContainer {
-  width: 100%;
-  max-width: 1000px;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 60px;
-  overflow: hidden;
+  max-width: 1177px;      /* 大きさは元のままキープ */
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* 航空写真自体（前回のまま） */
 .mainPhoto {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
-
-
 
 /* 2. 下部の小さな画像・ロゴエリアのコンテナ（Flexboxで横並び） */
 .mediaLogosContainer {
   display: flex;
   justify-content: center; /* 中央寄せ */
-  align-items: center;     /* 垂直方向中央寄せ */
-  gap: 30px;               /* 画像とロゴの間隔 */
   width: 100%;
   max-width: 400px;        /* コンパクトにまとめる */
-  margin-top: -30px;        /* ★調整：大きな写真に少し近づける（画像2.pngの雰囲気に） */
 }
 
 /* 小さな画像（Youtubeサムネイル画像）のコンテナ */
 .smallImagePreview {
   width: 200px;           /* 小さく設定（画像2.pngの比率） */
-  aspect-ratio: 16 / 9;   /* サムネイルの比率を保つ */
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 小さな影 */
   /* transitionやcursorは、リンクにしないなら不要 */
-}
-
-/* サムネイル画像自体 */
-.smallImagePreview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* コンテナに合わせてトリミング */
 }
