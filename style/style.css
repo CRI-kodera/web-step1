@@ -275,3 +275,89 @@ table {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 小さな影 */
   /* transitionやcursorは、リンクにしないなら不要 */
 }
+.newsSection {
+    background-color: #ffffff; /* ここから白背景 */
+    padding: 100px 20px;
+    color: #333;
+}
+
+.newsInner {
+    max-width: 1000px; /* リストの横幅 */
+    margin: 0 auto;
+}
+
+/* タイトル部分 */
+.newsTitle {
+    text-align: center;
+    font-family: "serif";
+    font-size: 32px;
+    margin-bottom: 60px;
+    letter-spacing: 0.1em;
+}
+
+.newsTitle span {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+/* リスト部分 */
+.newsList {
+    border-top: 1px solid #e0e0e0;
+}
+
+.newsList li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.newsList a {
+    display: flex;
+    align-items: center;
+    padding: 16px 10px;
+    transition: background 0.3s;
+}
+
+.newsList a:hover {
+    background-color: #f9f9f9;
+}
+
+/* カテゴリ（緑のバッジ） */
+.newsCategory {
+    background-color: #78781E; /* つつじ亭カラー */
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 15px;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.newsDate {
+    font-size: 14px;
+    color: #999;
+    margin-right: 40px;
+    font-family: sans-serif;
+}
+
+.newsText {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 一覧へリンク */
+.newsMore {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.newsMore a {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.newsMore a:hover {
+    color: #78781E;
+}
