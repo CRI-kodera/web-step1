@@ -361,3 +361,126 @@ table {
 .newsMore a:hover {
     color: #78781E;
 }
+.planSection {
+    background-color: #e8e7e2; /* 画像のような薄いベージュ背景 */
+    padding: 100px 0 0; /* 下のボタンまで繋げるため下パディングは0 */
+}
+
+.planInner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* タイトル */
+.planTitle {
+    text-align: center;
+    font-family: "serif";
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+.planTitle span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+/* プランカードの並び */
+.planFlex {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+.planCard {
+    background: #fff;
+    flex: 1;
+}
+.planImage img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+.planContent {
+    padding: 25px;
+}
+.planContent h3 {
+    font-size: 16px;
+    color: #78781E;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.planContent p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+.planLink {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #888;
+}
+
+/* 予約案内 */
+.reserveInfo {
+    text-align: center;
+    padding-bottom: 80px;
+}
+.reserveCatch {
+    font-size: 20px;
+    color: #78781E;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    display: inline-block;
+    padding: 15px 40px;
+    margin-bottom: 30px;
+}
+.reserveText {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+.reserveNote {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.8;
+    text-align: left;
+    display: inline-block; /* 中央に寄せつつ左揃え */
+}
+
+/* 下部アクションエリア */
+.bottomAction {
+    display: flex;
+    height: 120px;
+}
+.btnPlanList {
+    background-color: #78781E;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+.btnPlanList span {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.btnPlanList:hover { opacity: 0.9; }
+
+.telInfo {
+    background-color: #444;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.telInfo span { font-size: 12px; margin-bottom: 5px; }
+.telNumber { font-size: 24px; font-family: "serif"; }
