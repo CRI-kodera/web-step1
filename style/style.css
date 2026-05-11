@@ -484,3 +484,62 @@ table {
 }
 .telInfo span { font-size: 12px; margin-bottom: 5px; }
 .telNumber { font-size: 24px; font-family: "serif"; }
+
+.natureSection {
+    background-color: #e8e7e2; /* 前のセクションと同じ背景色で繋げる */
+    padding: 100px 20px;
+}
+
+.natureInner {
+    /* 他のセクションと共通の 1000px に設定 */
+    max-width: 1000px; 
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* 角を少し丸くしたり、影をつけたりすると他のカードと馴染みます（お好みで） */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* 軒先の画像 */
+.natureImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* 画像を少し暗くして文字を読みやすくする場合 */
+    filter: brightness(0.8);
+}
+
+/* 画像の上に重なる文字エリア */
+.natureContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 真ん中ぴったりに配置 */
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+/* 「庭 Nature」の部分 */
+.natureTitle {
+    font-family: "serif";
+    font-size: 48px;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
+}
+
+.natureTitle span {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+}
+
+/* 下のキャッチコピー */
+.natureText {
+    font-size: 20px;
+    font-family: "serif";
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
