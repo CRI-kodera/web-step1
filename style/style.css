@@ -486,27 +486,27 @@ table {
 .telNumber { font-size: 24px; font-family: "serif"; }
 
 .natureSection {
-    background-color: #e8e7e2; /* 前のセクションと同じ背景色で繋げる */
-    padding: 100px 20px;
+    background-color: #e8e7e2;
+    padding: 100px 0; /* 上下の余白（グレーの部分）は残す */
 }
 
 .natureInner {
-    /* 他のセクションと共通の 1000px に設定 */
-    max-width: 1000px; 
+    /* 1. 1000px制限をやめて、画面いっぱい（ボタンと同じ幅）まで広げる */
+    max-width: 100%; 
+    
+    /* 2. もしボタンの端に少し余白があるなら、ここを 100% ではなく 1200px などに微調整してください */
+    width: 100%;
+    
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    /* 角を少し丸くしたり、影をつけたりすると他のカードと馴染みます（お好みで） */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* 軒先の画像 */
 .natureImage img {
     width: 100%;
-    height: auto;
+    height: 500px;
+    object-fit: cover;
     display: block;
-    /* 画像を少し暗くして文字を読みやすくする場合 */
-    filter: brightness(0.8);
 }
 
 /* 画像の上に重なる文字エリア */
