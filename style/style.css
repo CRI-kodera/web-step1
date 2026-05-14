@@ -487,7 +487,7 @@ table {
 
 .natureSection {
     background-color: #e8e7e2;
-    padding: 100px 0; /* 上下の余白（グレーの部分）は残す */
+    padding: 15px 0; /* 上下の余白（グレーの部分）は残す */
 }
 
 .natureInner {
@@ -542,4 +542,59 @@ table {
     font-family: "serif";
     letter-spacing: 0.15em;
     font-weight: 500;
+}
+.RoomSection {
+    background-color: #e8e7e2;
+    padding: 15px 0; /* 元からある設定：上下のグレーの余白 */
+}
+
+.RoomInner {
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    /* absoluteを使わないので position: relative や overflow: hidden は消してもOKです */
+}
+
+.RoomImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 画像の下の文字エリア（absoluteなし・スッキリ版） */
+.RoomContent {
+    background-color: #e8e7e2; /* 画像の下も同じグレーの背景色にする */
+    padding: 30px 40px 50px 40px; /* 上・右・下・左 の順で余白を調整（下を少し広めに） */
+    text-align: left;           /* 左寄せ */
+    box-sizing: border-box;
+}
+
+/* 「間 Room」の部分 */
+.RoomTitle {
+    font-family: sans-serif;   /* 画像の「間」はゴシック体っぽいため変更 */
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;       /* 下のキャッチコピーとの間隔 */
+    
+    /* 「間」と「Room」を綺麗に横並びにする設定 */
+    display: flex;
+    align-items: baseline;
+    gap: 12px;                 /* 文字と文字の間の隙間 */
+}
+
+/* タイトル内の英語（Room） */
+.RoomTitle span {
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* 下のキャッチコピー「緑の潤いを〜」 */
+.RoomText {
+    font-size: 13px;
+    font-family: sans-serif;
+    color: #333;               /* 少しだけ薄い黒（ダークグレー） */
+    letter-spacing: 0.05em;
 }
