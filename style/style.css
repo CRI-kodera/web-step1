@@ -487,19 +487,23 @@ table {
 
 .natureSection {
     background-color: #e8e7e2;
-    padding: 15px 0; /* 上下の余白（グレーの部分）は残す */
+    padding: 15px 0;
 }
 
+/* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .natureInner {
-    /* 1. 1000px制限をやめて、画面いっぱい（ボタンと同じ幅）まで広げる */
     max-width: 100%; 
-    
-    /* 2. もしボタンの端に少し余白があるなら、ここを 100% ではなく 1200px などに微調整してください */
     width: 100%;
-    
     margin: 0 auto;
-    position: relative;
     overflow: hidden;
+    
+    display: grid;
+    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+}
+
+/* 2. 画像をグリッドの「overlap」エリアに配置 */
+.natureImage {
+    grid-area: overlap;
 }
 
 .natureImage img {
@@ -507,52 +511,71 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
+    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
 }
 
-/* 画像の上に重なる文字エリア */
+/* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
 .natureContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 真ん中ぴったりに配置 */
+    grid-area: overlap;
+    
+    /* Gridの機能を使って、上下左右の真ん中に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     text-align: center;
     color: #fff;
-    width: 100%;
+    z-index: 2; /* 画像より上にくるように */
 }
 
-/* 「庭 Nature」の部分 */
+/* 「庭 Nature」の部分（正解の縦並びスタイル） */
 .natureTitle {
     font-family: "serif";
-    font-size: 48px;
-    margin-bottom: 30px;
-    letter-spacing: 0.2em;
+    font-size: 56px;          /* 「庭」のサイズ（太く、大きく） */
+    font-weight: bold;        /* しっかり太く */
+    line-height: 1.1;         /* 上下の文字間隔を程よく詰める */
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
 }
 
 .natureTitle span {
-    display: block;
-    font-size: 16px;
-    font-family: sans-serif;
-    margin-top: 5px;
-    letter-spacing: 0.1em;
+    display: block;           /* 必ず「庭」の下に改行して落とす */
+    font-size: 28px;          /* 「Nature」のサイズ（少し控えめに） */
+    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;      /* Natureは「細め」にしてメリハリをつける */
+    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;         /* 「庭」との間の微調整 */
 }
 
 /* 下のキャッチコピー */
 .natureText {
-    font-size: 20px;
-    font-family: "serif";
+    font-size: 18px;
+    font-family: sans-serif;
     letter-spacing: 0.15em;
     font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* 白文字が背景に溶けないように影をつける */
 }
 .RoomSection {
     background-color: #e8e7e2;
-    padding: 15px 0; /* 元からある設定：上下のグレーの余白 */
+    padding: 5px 0;
 }
 
+/* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .RoomInner {
-    width: 100%;
     max-width: 100%; 
+    width: 100%;
     margin: 0 auto;
-    /* absoluteを使わないので position: relative や overflow: hidden は消してもOKです */
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+}
+
+/* 2. 画像をグリッドの「overlap」エリアに配置 */
+.RoomImage {
+    grid-area: overlap;
 }
 
 .RoomImage img {
@@ -560,41 +583,52 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
+    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
 }
 
-/* 画像の下の文字エリア（absoluteなし・スッキリ版） */
+/* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
 .RoomContent {
-    background-color: #e8e7e2; /* 画像の下も同じグレーの背景色にする */
-    padding: 30px 40px 50px 40px; /* 上・右・下・左 の順で余白を調整（下を少し広めに） */
-    text-align: left;           /* 左寄せ */
-    box-sizing: border-box;
-}
-
-/* 「間 Room」の部分 */
-.RoomTitle {
-    font-family: sans-serif;   /* 画像の「間」はゴシック体っぽいため変更 */
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 15px;       /* 下のキャッチコピーとの間隔 */
+    grid-area: overlap;
     
-    /* 「間」と「Room」を綺麗に横並びにする設定 */
+    /* Gridの機能を使って、上下左右の真ん中に配置 */
     display: flex;
-    align-items: baseline;
-    gap: 12px;                 /* 文字と文字の間の隙間 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* 画像より上にくるように */
 }
 
-/* タイトル内の英語（Room） */
+/* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
+.RoomTitle {
+    font-family: "serif";
+    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;        /* しっかり太く */
+    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
+
+    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+}
+
+/* 下の「Room」の部分 */
 .RoomTitle span {
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: bold;
+    display: block;           /* 💡 必ず「間」の下に改行して落とす */
+    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
+    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
+    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;         /* 「間」との間の微調整 */
 }
 
-/* 下のキャッチコピー「緑の潤いを〜」 */
+/* 下のキャッチコピー */
 .RoomText {
-    font-size: 13px;
-    font-family: sans-serif;
-    color: #333;               /* 少しだけ薄い黒（ダークグレー） */
-    letter-spacing: 0.05em;
+    font-size: 18px;
+    font-family: "sans-serif";
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
