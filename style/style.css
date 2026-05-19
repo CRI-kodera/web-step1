@@ -632,3 +632,151 @@ table {
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
+.FoodSection {
+    background-color: #e8e7e2;
+    padding: 15px 0;
+}
+/* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
+.FoodInner {
+    max-width: 100%; 
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+}
+
+/* 2. 画像をグリッドの「overlap」エリアに配置 */
+.FoodImage {
+    grid-area: overlap;
+}
+
+.FoodImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+}
+
+/* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
+.FoodContent {
+    grid-area: overlap;
+    
+    /* Gridの機能を使って、上下左右の真ん中に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* 画像より上にくるように */
+}
+
+/* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
+.FoodTitle {
+    font-family: "serif";
+    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;        /* しっかり太く */
+    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
+
+    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+}
+
+/* 下の「Room」の部分 */
+.FoodTitle span {
+    display: block;           /* 💡 必ず「間」の下に改行して落とす */
+    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
+    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
+    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;         /* 「間」との間の微調整 */
+}
+
+/* 下のキャッチコピー */
+.FoodText {
+    font-size: 18px;
+    font-family: "sans-serif";
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+.OnsenSection {
+    background-color: #e8e7e2;
+    padding: 15px 0;
+}
+/* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
+.OnsenInner {
+    max-width: 100%; 
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+}
+
+/* 2. 画像をグリッドの「overlap」エリアに配置 */
+.OnsenImage {
+    grid-area: overlap;
+}
+
+.OnsenImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+}
+
+/* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
+.OnsenContent {
+    grid-area: overlap;
+    
+    /* Gridの機能を使って、上下左右の真ん中に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    color: #fff;
+    z-index: 2; /* 画像より上にくるように */
+}
+
+/* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
+.OnsenTitle {
+    font-family: "serif";
+    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;        /* しっかり太く */
+    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
+
+    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+}
+
+/* 下の「Room」の部分 */
+.OnsenTitle span {
+    display: block;           /* 💡 必ず「間」の下に改行して落とす */
+    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
+    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
+    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;         /* 「間」との間の微調整 */
+}
+
+/* 下のキャッチコピー */
+.OnsenText {
+    font-size: 18px;
+    font-family: "sans-serif";
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
