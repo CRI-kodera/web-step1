@@ -283,16 +283,18 @@ table {
 
 .newsInner {
     max-width: 1000px; /* リストの横幅 */
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* タイトル部分 */
 .newsTitle {
-    text-align: center;
-    font-family: "serif";
+    text-align: center; 
+    font-family: "serif"; /*全世界で使われてそうなフォントを使う*/
     font-size: 32px;
-    margin-bottom: 60px;
-    letter-spacing: 0.1em;
+    margin-bottom: 60px; /*タイトル要素の下だけ60px余白とる*/
+    letter-spacing: 0.1em; /*文字同市の感覚*/
 }
 
 .newsTitle span {
@@ -310,11 +312,11 @@ table {
 
 .newsList li {
     border-bottom: 1px solid #e0e0e0;
-}
+} /*solid→線*/
 
 .newsList a {
     display: flex;
-    align-items: center;
+    align-items: center; /*上下中央揃え*/
     padding: 16px 10px;
     transition: background 0.3s;
 }
@@ -329,7 +331,7 @@ table {
     color: #fff;
     font-size: 12px;
     padding: 4px 15px;
-    min-width: 100px;
+    min-width: 100px; /*要素横幅の最小値*/
     text-align: center;
     margin-right: 40px;
 }
