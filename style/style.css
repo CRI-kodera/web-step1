@@ -782,3 +782,69 @@ table {
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
+.accessSection {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.accessInner {
+    max-width: 1280px; /* お手本画像の横幅に合わせる */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* マップ画像とボタンの間の隙間 */
+}
+
+/* マップ画像エリア */
+.accessMap {
+    width: 100%;
+}
+
+.accessMap img {
+    width: 100%;
+    height: auto;      /* 画像の比率を保ったまま綺麗に拡大縮小 */
+    display: block;
+}
+
+/* ボタンを横並びにするエリア */
+.accessButtons {
+    display: flex;
+    justify-content: center; /* ボタンを中央寄せ */
+    align-items: center;
+    gap: 20px; /* ボタン同士の隙間 */
+    width: 100%;
+}
+
+/* 共通ボタンスタイル */
+.accessButtons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+/* 左：アクセスボタン（グレー） */
+.btnDetail {
+    background-color: #b0b0b0;
+    color: #fff;
+    width: 240px;
+}
+.btnDetail:hover {
+    background-color: #999999;
+}
+
+/* 右：Google Mapボタン（黒） */
+.btnMapOpen {
+    background-color: #262626;
+    color: #fff;
+    width: 240px;
+}
+.btnMapOpen:hover {
+    background-color: #000000;
+}
