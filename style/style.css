@@ -848,3 +848,10 @@ table {
 .btnMapOpen:hover {
     background-color: #000000;
 }
+.siteFooter {
+  /*background-color:rgba(0,0,0,0.8);*/
+  width: 100%;
+  padding: 240.26px 103px; 
+  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
+  color: #ffffff;
+}
