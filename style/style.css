@@ -855,3 +855,14 @@ table {
   /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
   color: #ffffff;
 }
+  /*background-color:rgba(0,0,0,0.8);*/
+  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
+  /*7840px 157px 1000px 893px*/
+  
+/* 3. 右側のボタンエリア全体 */
+.footerLogo {
+  display: flex;
+  gap: 15px; /* ボタン同士の隙間 */
+  justify-content: flex-end;
+  padding: 10px 100px;
+}
