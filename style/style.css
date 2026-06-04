@@ -848,36 +848,25 @@ table {
 .btnMapOpen:hover {
     background-color: #000000;
 }
-.siteFooter {
-  /*background-color:rgba(0,0,0,0.8);*/
-  width: 100%;
-  padding: 240.26px 103px; 
-  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
-  color: #ffffff;
+ .footerWrap {
+    display: flex;
+    justify-content: space-around;
 }
-  /*background-color:rgba(0,0,0,0.8);*/
-  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
-  /*7840px 157px 1000px 893px*/
-  
-/* 3. 右側のボタンエリア全体 */
+
 .footerLogo {
-  display: flex;
-  gap: 15px; /* ボタン同士の隙間 */
+    display: flex;
+    gap: 50px;
+    /* ボタン同士の隙間 */
     align-items: center;
-  margin-left: auto;
+    flex-direction: column;
+    justify-content: center;
 }
-.footerLogo img {
-margin-top: auto;
-margin-left: 893px;
-}
+
 .access {
-  color: #000000;
-  font-family: "serif";
-  font-size: 15px;      /* 縦書きに対して小さく設定 */
-  line-height: 2.5;     /* 行間を広げて読みやすく */
-  		width:200px;
-		height:auto;
-		margin:0;
+    color: #000000;
+    font-family: "serif";
+    font-size: 14px;
+    line-height: 2.5;
 }
 .footerNavigation ul {
   display: flex;           /* 横並びにする */
