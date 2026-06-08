@@ -871,7 +871,7 @@ table {
 .footerNavigation ul {
   display: flex;           /* 横並びにする */
   list-style: none;        /* 文頭の ● を消す */
-  margin: 0;
+  margin: 100px;
   padding: 0;
   gap: 40px;               /* 文字同士の間隔 */
   justify-content: center; /* 中央揃え（左寄せの場合は flex-start） */
@@ -881,7 +881,21 @@ table {
 .footerNavigation a {
   color: #222222; /* 文字の色を白にする */
   text-decoration: none;    /* 下線を消す */
-  font-size: 20px;          /* 文字の大きさ */
+  font-size: 15px;          /* 文字の大きさ */
   font-weight: 500;         /* 文字の太さを少し出す */
   transition: color 0.3s;   /* マウスを乗せた時の変化を滑らかに */
+}
+.footerlink ul {
+  display: flex;           /* 横並びにする */
+  margin: 10px;
+  padding: 0;
+  gap: 40px;              
+  justify-content: center; /* 中央揃え（左寄せの場合は flex-start） */
+
+}
+.footerlast{
+  margin: 50px;
+  font-size: 10px;
+  text-align: center;
+
 }
