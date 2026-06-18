@@ -282,19 +282,20 @@ table {
 }
 
 .newsInner {
-    max-width: 1000px; /* リストの横幅 */
+    max-width: 1000px; /* リストの最大横幅 */
+    width: 100%;       /* 画面が狭くなったとき用の横幅100% */
+    margin: 0 auto;    /* 💡超重要：これでリスト全体が画面の「真ん中」に配置されます */
     display: flex;
-    justify-content: center;
     flex-direction: column;
 }
 
 /* タイトル部分 */
 .newsTitle {
     text-align: center; 
-    font-family: "serif"; /*全世界で使われてそうなフォントを使う*/
+    font-family: "serif";
     font-size: 32px;
-    margin-bottom: 60px; /*タイトル要素の下だけ60px余白とる*/
-    letter-spacing: 0.1em; /*文字同市の感覚*/
+    margin-bottom: 60px;
+    letter-spacing: 0.1em;
 }
 
 .newsTitle span {
@@ -307,17 +308,22 @@ table {
 
 /* リスト部分 */
 .newsList {
+    list-style: none;         /* 💡念のため、箇条書きの「・」を消す設定を追加 */
+    padding: 0;               /* 💡ブラウザのデフォルト余白をリセット */
+    margin: 0;
     border-top: 1px solid #e0e0e0;
 }
 
 .newsList li {
     border-bottom: 1px solid #e0e0e0;
-} /*solid→線*/
+}
 
 .newsList a {
     display: flex;
-    align-items: center; /*上下中央揃え*/
-    padding: 16px 10px;
+    align-items: center; /* 上下中央揃え */
+    padding: 24px 10px;  /* 💡お手本画像に合わせて、上下の余白を少し広げると高級感が出ます */
+    text-decoration: none; /* 💡リンクの下線を消す設定を追加 */
+    color: #333;         /* 💡リンクの文字色を固定 */
     transition: background 0.3s;
 }
 
@@ -331,7 +337,8 @@ table {
     color: #fff;
     font-size: 12px;
     padding: 4px 15px;
-    min-width: 100px; /*要素横幅の最小値*/
+    width: 100px;       /* 💡min-widthよりwidth固定の方がバッジの幅が綺麗に揃います */
+    box-sizing: border-box; /* 💡パディングを含めた幅計算にする */
     text-align: center;
     margin-right: 40px;
 }
@@ -357,6 +364,7 @@ table {
 .newsMore a {
     font-size: 14px;
     color: #666;
+    text-decoration: none; /* 💡リンクの下線を消す */
     transition: color 0.3s;
 }
 
@@ -458,8 +466,16 @@ table {
     display: flex;
     height: 120px;
 }
+/* 💡 2つのボタンを横並びにして画面いっぱいに広げる親要素（もし無ければ追加してください） */
+.footerButtonsContainer {
+    display: flex;
+    width: 100%;
+    height: 140px; /* 💡 画像に合わせた、押しやすい高級感のある高さ */
+}
+
+/* --- 左側：宿泊プラン一覧ボタン --- */
 .btnPlanList {
-    background-color: #78781E;
+    background-color: #78781E; /* つつじ亭カラー */
     color: #fff;
     flex: 1;
     display: flex;
@@ -468,39 +484,71 @@ table {
     align-items: center;
     text-decoration: none;
     transition: opacity 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.btnPlanList span {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-.btnPlanList:hover { opacity: 0.9; }
 
+/* 上の小さな文字 */
+.btnPlanList span {
+    font-size: 10px;             /* 💡 画像に合わせて少し小さく上品に */
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;         /* 💡 下のメイン文字との間隔を少しあける */
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+
+/* メインの文字（宿泊プラン一覧はこちら） */
+.btnPlanList h3, 
+.btnPlanList {          /* HTMLのタグに合わせて適宜クラス名を調整してください */
+    font-size: 28px;             /* 💡 ドンと見栄えのする大きさに変更 */
+    font-family: "serif";        /* つつじ亭の雰囲気に合わせた明朝体 */
+    letter-spacing: 0.08em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.btnPlanList:hover { 
+    opacity: 0.9; 
+}
+
+
+/* --- 右側：お電話案内エリア（レイアウト崩れ修正版） --- */
 .telInfo {
     background-color: #444;
     color: #fff;
-    flex: 1;
+    flex: 1;                 /* 💡これで左右50%ずつの綺麗な等幅に戻ります */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.telInfo span { font-size: 12px; margin-bottom: 5px; }
-.telNumber { font-size: 24px; font-family: "serif"; }
-
-.natureSection {
-    background-color: #e8e7e2;
-    padding: 15px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
-.natureInner {
-    max-width: 100%; 
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    
-    display: grid;
-    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+/* 上の小さな文字（お問い合わせはこちら） */
+.telInfo > span { 
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    opacity: 0.9;
+    font-family: sans-serif;
+}
+
+/* 下の電話番号全体 */
+.telNumber { 
+    font-size: 32px;
+    font-family: sans-serif; /* 💡左側と同じゴシック体に統一 */
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* 「tel.」の文字だけを個別に少し小さくする */
+.telNumber span {
+    font-size: 22px;
+    font-weight: normal;
+    margin-right: 4px;
+    font-family: sans-serif;
 }
 
 /* 2. 画像をグリッドの「overlap」エリアに配置 */
