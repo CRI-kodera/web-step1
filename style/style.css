@@ -499,7 +499,7 @@ table {
 
 /* メインの文字（宿泊プラン一覧はこちら） */
 .btnPlanList h3, 
-.btnPlanList {          /* HTMLのタグに合わせて適宜クラス名を調整してください */
+.btnPlanList { 
     font-size: 28px;             /* 💡 ドンと見栄えのする大きさに変更 */
     font-family: "serif";        /* つつじ亭の雰囲気に合わせた明朝体 */
     letter-spacing: 0.08em;
@@ -552,6 +552,12 @@ table {
 }
 
 /* 2. 画像をグリッドの「overlap」エリアに配置 */
+.mainContents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;            /* 💡これでセクション同士の間にだけ、正確に15pxの隙間が空きます */
+    background-color: #e8e7e2; /* 💡【超重要】隙間から白い裏地が見えないよう、同じ背景色を敷きます */
+}
 .natureImage {
     grid-area: overlap;
 }
@@ -609,7 +615,6 @@ table {
 }
 .RoomSection {
     background-color: #e8e7e2;
-    padding: 5px 0;
 }
 
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
@@ -684,7 +689,6 @@ table {
 }
 .FoodSection {
     background-color: #e8e7e2;
-    padding: 15px 0;
 }
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .FoodInner {
@@ -758,7 +762,6 @@ table {
 }
 .OnsenSection {
     background-color: #e8e7e2;
-    padding: 15px 0;
 }
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .OnsenInner {
@@ -832,7 +835,6 @@ table {
 }
 .accessSection {
     background-color: #f7f7f7;
-    padding: 60px 0;
 }
 
 .accessInner {
