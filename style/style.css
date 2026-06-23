@@ -558,6 +558,28 @@ table {
     gap: 15px;            /* 💡これでセクション同士の間にだけ、正確に15pxの隙間が空きます */
     background-color: #e8e7e2; /* 💡【超重要】隙間から白い裏地が見えないよう、同じ背景色を敷きます */
 }
+/* ==========================================
+   「庭（Nature）」セクションの完全修正版コード
+========================================== */
+
+/* 1. 庭セクション全体の土台（間や食と見た目を揃える） */
+.natureSection {
+    background-color: #e8e7e2;
+    padding: 0;
+}
+
+/* 2. 画像と文字を重ね合わせるための設定 */
+.natureInner {
+    max-width: 100%; 
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-areas: "overlap"; /* 重ね合わせエリアの名前を定義 */
+}
+
+/* 3. 画像を配置 */
 .natureImage {
     grid-area: overlap;
 }
@@ -570,11 +592,11 @@ table {
     filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
 }
 
-/* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
+/* 4. 文字エリアを画像の上に完全に重ねる */
 .natureContent {
     grid-area: overlap;
     
-    /* Gridの機能を使って、上下左右の真ん中に配置 */
+    /* 上下左右の真ん中に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -585,7 +607,7 @@ table {
     z-index: 2; /* 画像より上にくるように */
 }
 
-/* 「庭 Nature」の部分（正解の縦並びスタイル） */
+/* 「庭 Nature」の文字の見た目 */
 .natureTitle {
     font-family: "serif";
     font-size: 56px;          /* 「庭」のサイズ（太く、大きく） */
@@ -598,9 +620,9 @@ table {
 
 .natureTitle span {
     display: block;           /* 必ず「庭」の下に改行して落とす */
-    font-size: 28px;          /* 「Nature」のサイズ（少し控えめに） */
+    font-size: 28px;          /* 「Nature」のサイズ */
     font-family: "serif";     /* 綺麗な明朝・セリフ体 */
-    font-weight: normal;      /* Natureは「細め」にしてメリハリをつける */
+    font-weight: normal;      /* Natureは細めにして上品に */
     letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
     margin-top: 10px;         /* 「庭」との間の微調整 */
 }
