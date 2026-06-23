@@ -901,6 +901,7 @@ table {
  .footerWrap {
     display: flex;
     justify-content: space-around;
+    margin-top: 150px;
 }
 
 .footerLogo {
