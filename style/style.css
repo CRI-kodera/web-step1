@@ -374,6 +374,7 @@ table {
 .planSection {
     background-color: #e8e7e2; /* 画像のような薄いベージュ背景 */
     padding: 100px 0 0; /* 下のボタンまで繋げるため下パディングは0 */
+    margin-bottom: 15px;
 }
 
 .planInner {
@@ -564,7 +565,7 @@ table {
 
 /* 1. 庭セクション全体の土台（間や食と見た目を揃える） */
 .natureSection {
-    background-color: #e8e7e2;
+    background-color: #ffffff;
     padding: 0;
 }
 
@@ -636,7 +637,7 @@ table {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* 白文字が背景に溶けないように影をつける */
 }
 .RoomSection {
-    background-color: #e8e7e2;
+    background-color: #ffffff;
 }
 
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
@@ -710,7 +711,7 @@ table {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
 .FoodSection {
-    background-color: #e8e7e2;
+    background-color: #ffffff;
 }
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .FoodInner {
@@ -783,7 +784,7 @@ table {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
 .OnsenSection {
-    background-color: #e8e7e2;
+    background-color: #ffffff;
 }
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .OnsenInner {
@@ -855,10 +856,11 @@ table {
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
 }
+/* 💡ここを新しく追加します（他の箇所はいじりません） */
 .accessSection {
-    background-color: #f7f7f7;
+    background-color: #ffffff; /* 👈 マップエリアの背景を真っ白に塗りつぶして、上の薄グレーを遮断します */
+    padding: 60px 0;           /* 上下の程よい余白（お好みの広さに調整してOKです） */
 }
-
 .accessInner {
     max-width: 1280px;
     width: 100%;
