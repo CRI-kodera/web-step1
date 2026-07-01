@@ -1,10 +1,12 @@
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>つつじ亭</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
     <!-- 
         ★実装に必要そうなHTMLタグ一覧★
@@ -19,253 +21,253 @@
     -->
 
     <!-- ヘッダー要素を意味するタグ -->
-<header class="siteHeader">
-    <div class="headerInner">
-        <div class="headerLogo">
-        <a href="#"><img src="image/logo1.png" alt="つつじ亭"></a>
+    <header class="siteHeader">
+        <div class="headerInner">
+            <div class="headerLogo">
+                <a href="#"><img src="image/logo1.png" alt="つつじ亭"></a>
+            </div>
+
+            <nav class="headerNavigation">
+                <ul>
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#">自然林の庭</a></li>
+                    <li><a href="#">客室</a></li>
+                    <li><a href="#">料理</a></li>
+                    <li><a href="#">温泉</a></li>
+                    <li><a href="#">交通</a></li>
+                </ul>
+            </nav>
+
+            <div class="headerActions">
+                <a href="#" class="btnReserve">ご予約</a>
+                <a href="#" class="btnCalendar">空室カレンダー</a>
+            </div>
         </div>
-
-<nav class="headerNavigation">
-    <ul>
-        <li><a href="#">トップ</a></li>
-        <li><a href="#">自然林の庭</a></li>
-        <li><a href="#">客室</a></li>
-        <li><a href="#">料理</a></li>
-        <li><a href="#">温泉</a></li>
-        <li><a href="#">交通</a></li>
-    </ul>
-</nav>
-
-<div class="headerActions">
-  <a href="#" class="btnReserve">ご予約</a>
-  <a href="#" class="btnCalendar">空室カレンダー</a>
-</div>
-    </div>
-</header>
+    </header>
 
 
     <!-- メイン要素を意味するタグ -->
     <main>
         <div class="mainVisual">
-  <img src="image/re-KV-12.png" alt="背景">
-    <div class="mainTitle">
-        <img src="image/kv_title.png" alt="つつじ亭 温泉">
-    </div>
+            <img src="image/re-KV-12.png" alt="背景">
+            <div class="mainTitle">
+                <img src="image/kv_title.png" alt="つつじ亭 温泉">
+            </div>
 
-</div>
-
-<section class="mainSection">
-  <div class="conceptMessage">
-    <p>約三千坪を誇る<br>自然林の庭で、<br>四季折々の風景を</p>
-  </div>
-    <div class="descriptionMessage">
-        <p>五千坪の敷地に建つ、つつじ亭は、約三千坪の自然林を野趣あふれる庭としております。</p>
-        <p>白根の山並を望む、四季折々のなかで朝夕の草木のそよぎ、</p>
-        <p>風の香り、雨音、雪の舞いにふれていただく木造りの小さな宿でございます。</p>
-        <p>自然に寄り添った宿ゆえに、季節にうもれ、</p>
-        <p>ゆっくりと時をおすごしいただくことを、お客様への何よりのおもてなしの心といたしております。</p>
-    </div>
-    <div class="mainPhotoContainer">
-    <img src="image/main_img01 1.jpg" alt="つつじ亭 航空写真" class="mainPhoto">
-    </div>
-
-  <div class="mediaLogosContainer">
-    <div class="smallImagePreview">
-      <img src="image/main_video 1.jpg" alt="つつじ亭 紹介動画">
-    </div>
-    
-  </div>
-</section>
-<section class="newsSection">
-    <div class="newsInner">
-        <h2 class="newsTitle">
-            お知らせ
-            <span>News & Information</span>
-        </h2>
-
-        <ul class="newsList"> <!--箇条書き同じ要素の繰り返し-->
-            <li>
-                <a href="#">
-                    <span class="newsCategory">つつじ亭</span>
-                    <span class="newsDate">2025/xx/xx</span>
-                    <span class="newsText">2025年弥生〜卯月献立</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="newsCategory">つつじ亭</span>
-                    <span class="newsDate">2025/xx/xx</span>
-                    <span class="newsText">2025年弥生〜卯月献立</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="newsCategory">つつじ亭</span>
-                    <span class="newsDate">2025/xx/xx</span>
-                    <span class="newsText">2025年弥生〜卯月献立</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="newsCategory">つつじ亭</span>
-                    <span class="newsDate">2025/xx/xx</span>
-                    <span class="newsText">2025年弥生〜卯月献立</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="newsCategory">つつじ亭</span>
-                    <span class="newsDate">2025/xx/xx</span>
-                    <span class="newsText">2025年弥生〜卯月献立</span>
-                </a>
-            </li>
-        </ul>
-
-        <div class="newsMore">
-            <a href="#">>> お知らせ一覧へ</a>
         </div>
-    </div>
-</section>
-<!-- おすすめプランセクション -->
-<section class="planSection">
-    <div class="planInner">
-        <h2 class="planTitle">
-            おすすめプラン
-            <span>Recommend plan</span>
-        </h2>
 
-        <!-- プランカード2枚 -->
-        <div class="planFlex">
-            <div class="planCard">
-                <div class="planImage"><img src="image/plan_img01.jpg" alt="プラン1"></div>
-                <div class="planContent">
-                    <h3>【HP限定】自社HPからのご予約がお得！ -ベストレートプラン-</h3>
-                    <p>このプランはホームページからのご予約（オンライン予約）限定のプランとなります。お電話でのご予約を承っておりません。 ※休前日は設定外となります。</p>
-                    <a href="#" class="planLink">>> 詳細はこちら</a>
+        <section class="mainSection">
+            <div class="conceptMessage">
+                <p>約三千坪を誇る<br>自然林の庭で、<br>四季折々の風景を</p>
+            </div>
+            <div class="descriptionMessage">
+                <p>五千坪の敷地に建つ、つつじ亭は、約三千坪の自然林を野趣あふれる庭としております。</p>
+                <p>白根の山並を望む、四季折々のなかで朝夕の草木のそよぎ、</p>
+                <p>風の香り、雨音、雪の舞いにふれていただく木造りの小さな宿でございます。</p>
+                <p>自然に寄り添った宿ゆえに、季節にうもれ、</p>
+                <p>ゆっくりと時をおすごしいただくことを、お客様への何よりのおもてなしの心といたしております。</p>
+            </div>
+            <div class="mainPhotoContainer">
+                <img src="image/main_img01 1.jpg" alt="つつじ亭 航空写真" class="mainPhoto">
+            </div>
+
+            <div class="mediaLogosContainer">
+                <div class="smallImagePreview">
+                    <img src="image/main_video 1.jpg" alt="つつじ亭 紹介動画">
+                </div>
+
+            </div>
+        </section>
+        <section class="newsSection">
+            <div class="newsInner">
+                <h2 class="newsTitle">
+                    お知らせ
+                    <span>News & Information</span>
+                </h2>
+
+                <ul class="newsList"> <!--箇条書き同じ要素の繰り返し-->
+                    <li>
+                        <a href="#">
+                            <span class="newsCategory">つつじ亭</span>
+                            <span class="newsDate">2025/xx/xx</span>
+                            <span class="newsText">2025年弥生〜卯月献立</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="newsCategory">つつじ亭</span>
+                            <span class="newsDate">2025/xx/xx</span>
+                            <span class="newsText">2025年弥生〜卯月献立</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="newsCategory">つつじ亭</span>
+                            <span class="newsDate">2025/xx/xx</span>
+                            <span class="newsText">2025年弥生〜卯月献立</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="newsCategory">つつじ亭</span>
+                            <span class="newsDate">2025/xx/xx</span>
+                            <span class="newsText">2025年弥生〜卯月献立</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="newsCategory">つつじ亭</span>
+                            <span class="newsDate">2025/xx/xx</span>
+                            <span class="newsText">2025年弥生〜卯月献立</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="newsMore">
+                    <a href="#">>> お知らせ一覧へ</a>
+                </div>
+            </div>
+        </section>
+        <!-- おすすめプランセクション -->
+        <section class="planSection">
+            <div class="planInner">
+                <h2 class="planTitle">
+                    おすすめプラン
+                    <span>Recommend plan</span>
+                </h2>
+
+                <!-- プランカード2枚 -->
+                <div class="planFlex">
+                    <div class="planCard">
+                        <div class="planImage"><img src="image/plan_img01.jpg" alt="プラン1"></div>
+                        <div class="planContent">
+                            <h3>【HP限定】自社HPからのご予約がお得！ -ベストレートプラン-</h3>
+                            <p>このプランはホームページからのご予約（オンライン予約）限定のプランとなります。お電話でのご予約を承っておりません。 ※休前日は設定外となります。</p>
+                            <a href="#" class="planLink">>> 詳細はこちら</a>
+                        </div>
+                    </div>
+
+                    <div class="planCard">
+                        <div class="planImage"><img src="image/plan_img02.jpg" alt="プラン2"></div>
+                        <div class="planContent">
+                            <h3>【HP限定】Private Anniversary 〜ふんわりと心やすまる記念日プラン〜</h3>
+                            <p>大切な記念日はプライベート感溢れる「湯けむりの里」でごゆっくりとお過ごし下さい。</p>
+                            <a href="#" class="planLink">>> 詳細はこちら</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 予約案内テキスト -->
+                <div class="reserveInfo">
+                    <h4 class="reserveCatch">つつじ亭の予約はホームページからの予約が一番お得です。</h4>
+                    <p class="reserveText">
+                        ホームページ限定予約特典として、最安値料金（ベストレート）にてご案内いたします。<br>
+                        また、ホームページ限定の特別プランをご用意しております。
+                    </p>
+                    <p class="reserveNote">
+                        【ベストレート価格のご利用条件】<br>
+                        ◇特典や内容（客室・人数等）が異なるプランは比較対象外とします。<br>
+                        ※一般のお客様向けに料金が公開されていないプランは除きます。<br>
+                        ◇当宿発行の株主優待券のみがサイトで同時に予約できないサイトは対象外とします。
+                    </p>
                 </div>
             </div>
 
-            <div class="planCard">
-                <div class="planImage"><img src="image/plan_img02.jpg" alt="プラン2"></div>
-                <div class="planContent">
-                    <h3>【HP限定】Private Anniversary 〜ふんわりと心やすまる記念日プラン〜</h3>
-                    <p>大切な記念日はプライベート感溢れる「湯けむりの里」でごゆっくりとお過ごし下さい。</p>
-                    <a href="#" class="planLink">>> 詳細はこちら</a>
+            <!-- 下部の巨大ボタンエリア -->
+            <div class="bottomAction">
+                <a href="#" class="btnPlanList">
+                    <span>お客さまに合った宿泊プランをご予約いただけます</span>
+                    宿泊プラン一覧はこちら
+                </a>
+                <div class="telInfo">
+                    <span>お問い合わせはこちら</span>
+                    <p class="telNumber"><span>tel.</span>0279-88-9321</p>
                 </div>
             </div>
-        </div>
+        </section>
+        <div class="mainContents">
+            <section class="natureSection">
+                <div class="natureInner">
+                    <div class="natureImage">
+                        <img src="image/nature1.jpg" alt="庭の風景">
+                    </div>
 
-        <!-- 予約案内テキスト -->
-        <div class="reserveInfo">
-            <h4 class="reserveCatch">つつじ亭の予約はホームページからの予約が一番お得です。</h4>
-            <p class="reserveText">
-                ホームページ限定予約特典として、最安値料金（ベストレート）にてご案内いたします。<br>
-                また、ホームページ限定の特別プランをご用意しております。
-            </p>
-            <p class="reserveNote">
-                【ベストレート価格のご利用条件】<br>
-                ◇特典や内容（客室・人数等）が異なるプランは比較対象外とします。<br>
-                ※一般のお客様向けに料金が公開されていないプランは除きます。<br>
-                ◇当宿発行の株主優待券のみがサイトで同時に予約できないサイトは対象外とします。
-            </p>
-        </div>
-    </div>
+                    <div class="natureContent">
+                        <h2 class="natureTitle">
+                            庭
+                            <span>Nature</span>
+                        </h2>
+                        <p class="natureText">季節の移ろいを感じる、約三千坪の自然林</p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- 下部の巨大ボタンエリア -->
-    <div class="bottomAction">
-        <a href="#" class="btnPlanList">
-            <span>お客さまに合った宿泊プランをご予約いただけます</span>
-            宿泊プラン一覧はこちら
-        </a>
-        <div class="telInfo">
-            <span>お問い合わせはこちら</span>
-                <p class="telNumber"><span>tel.</span>0279-88-9321</p>
-        </div>
-    </div>
-</section>
-<div class="mainContents">
-<section class="natureSection">
-    <div class="natureInner">
-        <div class="natureImage">
-            <img src="image/nature1.jpg" alt="庭の風景">
-        </div>
+            <section class="RoomSection">
+                <div class="RoomInner">
+                    <div class="RoomImage">
+                        <img src="image/Room1.jpg" alt="部屋の風景">
+                    </div>
 
-        <div class="natureContent">
-            <h2 class="natureTitle">
-                庭
-                <span>Nature</span>
-            </h2>
-            <p class="natureText">季節の移ろいを感じる、約三千坪の自然林</p>
-        </div>
-    </div>
-</section>
+                    <div class="RoomContent">
+                        <h2 class="RoomTitle">
+                            間
+                            <span>Room</span>
+                        </h2>
+                        <p class="RoomText">緑の潤いを傍らにする、寛ぎの空間</p>
+                    </div>
+                </div>
+            </section>
+            <section class="FoodSection">
+                <div class="FoodInner">
+                    <div class="FoodImage">
+                        <img src="image/food1.jpg" alt="食の風景">
+                    </div>
 
-<section class="RoomSection">
-    <div class="RoomInner">
-        <div class="RoomImage">
-            <img src="image/Room1.jpg" alt="部屋の風景">
-        </div>
+                    <div class="FoodContent">
+                        <h2 class="FoodTitle">
+                            食
+                            <span>Food</span>
+                        </h2>
+                        <p class="FoodText">一客一亭の彩り豊かな滋味</p>
+                    </div>
+                </div>
+            </section>
+            <section class="OnsenSection">
+                <div class="OnsenInner">
+                    <div class="OnsenImage">
+                        <img src="image/onsen1.jpg" alt="湯の風景">
+                    </div>
 
-        <div class="RoomContent">
-            <h2 class="RoomTitle">
-                間
-                <span>Room</span>
-            </h2>
-            <p class="RoomText">緑の潤いを傍らにする、寛ぎの空間</p>
-        </div>
-    </div>
-</section>
-<section class="FoodSection">
-    <div class="FoodInner">
-        <div class="FoodImage">
-            <img src="image/food1.jpg" alt="食の風景">
-        </div>
+                    <div class="OnsenContent">
+                        <h2 class="OnsenTitle">
+                            湯
+                            <span>Onsen</span>
+                        </h2>
+                        <p class="OnsenText">風景の中に溶け込む、心地よい湯浴み</p>
+                    </div>
+                </div>
+            </section>
+            <section class="accessSection">
+                <div class="accessInner">
 
-        <div class="FoodContent">
-            <h2 class="FoodTitle">
-                食
-                <span>Food</span>
-            </h2>
-            <p class="FoodText">一客一亭の彩り豊かな滋味</p>
-        </div>
-    </div>
-</section>
-<section class="OnsenSection">
-    <div class="OnsenInner">
-        <div class="OnsenImage">
-            <img src="image/onsen1.jpg" alt="湯の風景">
-        </div>
+                    <div class="accessMap">
+                        <img src="image/スクリーンショット2025-04-09 12.30.181.jpg" alt="アクセスマップ">
+                    </div>
 
-        <div class="OnsenContent">
-            <h2 class="OnsenTitle">
-                湯
-                <span>Onsen</span>
-            </h2>
-            <p class="OnsenText">風景の中に溶け込む、心地よい湯浴み</p>
-        </div>
-    </div>
-</section>
-<section class="accessSection">
-    <div class="accessInner">
-        
-        <div class="accessMap">
-            <img src="image/スクリーンショット2025-04-09 12.30.181.jpg" alt="アクセスマップ">
-        </div>
-        
-        <div class="accessButtons">
-            <a href="#" class="btnDetail">つつじ亭へのアクセスを詳しく</a>
-            <a href="#" class="btnMapOpen">Google Mapで開く</a>
-        </div>
+                    <div class="accessButtons">
+                        <a href="#" class="btnDetail">つつじ亭へのアクセスを詳しく</a>
+                        <a href="#" class="btnMapOpen">Google Mapで開く</a>
+                    </div>
 
-    </div>
-</section>
-</div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- フッター要素を意味するタグ -->
     <footer class="siteFooter">
         <div class="footerInner">
-        
+
             <div class="footerWrap">
                 <div class="footermain">
                     <a href="#"></a><img src="image/footer_img1.jpg" alt="つつじ亭">
@@ -300,8 +302,8 @@
                 </ul>
             </nav>
             <div class="footerlast">
-                <p>Copyright © tsutsujitei.  All Rights Reserved.</p>
-            </div>    
+                <p>Copyright © tsutsujitei. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -325,4 +327,5 @@
 
 
 </body>
+
 </html>

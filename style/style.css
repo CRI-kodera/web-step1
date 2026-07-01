@@ -7,17 +7,17 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img,
@@ -25,32 +25,34 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 ul,
 ol,
 li {
-  list-style: none;
+    list-style: none;
 }
+
 /*./名前→｛｝*/
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 /* リセットCSS おわり */
 /*#名前→｛｝
 #abc {
@@ -58,240 +60,282 @@ table {
 }*/
 
 .siteHeader {
-  /*background-color:rgba(0,0,0,0.8);*/
-  width: 100%;
-  padding: 12px 40px; 
-  /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
-  color: #ffffff;
+    /*background-color:rgba(0,0,0,0.8);*/
+    width: 100%;
+    padding: 12px 40px;
+    /* 上から右回りに余白を取る 2個の場合は左が上下、右が左右 */
+    color: #ffffff;
 }
 
 /* 1. 全体のレイアウト：ロゴ・ナビ・ボタンを配置 */
 .headerInner {
-  display: flex;
-  align-items: center;
-  /* 左詰めに設定（あとでナビに auto マージンをかけてボタンを飛ばすため） */
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    /* 左詰めに設定（あとでナビに auto マージンをかけてボタンを飛ばすため） */
+    justify-content: flex-start;
 }
-
-/* ロゴのサイズをさらにコンパクトに */
 .headerNavigation {
-  /* ここでロゴとの距離を自由に調整できます */
-  margin-left: 55px; /* 60px 離す。もっと近づけるなら 30px などに */
+    /* ここでロゴとの距離を自由に調整できます */
+    margin-left: 55px;
 }
 
 /* ナビゲーションのリストを横に並べる */
 .headerNav ul {
-  display: flex;           /* 横並びにする */
-  list-style: none;        /* 文頭の ● を消す */
-  margin: 0;
-  padding: 0;
-  gap: 40px;               /* 文字同士の間隔 */
+    display: flex;
+    /* 横並びにする */
+    list-style: none;
+    /* 文頭の ● を消す */
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    /* 文字同士の間隔 */
 }
 
 .headerNav a {
-  color: #ffffff; /* 文字の色を白にする */
-  text-decoration: none;    /* 下線を消す */
-  font-size: 10px;          /* 文字の大きさ */
-  font-weight: 500;         /* 文字の太さを少し出す */
-  transition: color 0.3s;   /* マウスを乗せた時の変化を滑らかに */
+    color: #ffffff;
+    /* 文字の色を白にする */
+    text-decoration: none;
+    /* 下線を消す */
+    font-size: 10px;
+    /* 文字の大きさ */
+    font-weight: 500;
+    /* 文字の太さを少し出す */
+    transition: color 0.3s;
+    /* マウスを乗せた時の変化を滑らかに */
 }
 
 /* 右側のアクションボタンのサイズ調整 */
 .actionImg {
-  height: 45px;    /* 予約ボタンなどは少し大きくしてもOK */
-  width: auto;
+    height: 45px;
+    width: auto;
 }
 
 /* 2. ナビゲーション：ロゴに近づけつつ、ボタンを右に押し出す */
 .headerNavigation {
-  margin-left: 50px;  /* ロゴとの距離：お好みで調整 */
+    margin-left: 50px;
 }
 
 .headerNavigation ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 /* 3. 右側のボタンエリア全体 */
 .headerActions {
-  display: flex;
-  gap: 15px; /* ボタン同士の隙間 */
-  align-items: center;
-  margin-left: auto;
+    display: flex;
+    gap: 15px;
+    /* ボタン同士の隙間 */
+    align-items: center;
+    margin-left: auto;
 }
 
 /* 4. ボタンの共通設定 */
 .headerActions a {
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px 20px; /* 横幅を少し広げて 20px にすると画像に近くなります */
-  display: inline-block;
-  transition: all 0.3s;
-  font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 20px;
+    /* 横幅を少し広げて 20px にすると画像に近くなります */
+    display: inline-block;
+    transition: all 0.3s;
+    font-weight: 500;
 }
 
 /* ★ご予約ボタン：背景色と内側の余白 */
-.headerActions .btnReserve{
-  background-color: #78781E; /* つつじ亭のオリーブ色 */
-  color: #ffffff;
-  padding: 10px 15px; /* 上下10px、左右15pxで内側から押し広げる */
-  font-weight: bold;
+.headerActions .btnReserve {
+    background-color: #78781E;
+    /* つつじ亭のオリーブ色 */
+    color: #ffffff;
+    padding: 10px 15px;
+    /* 上下10px、左右15pxで内側から押し広げる */
+    font-weight: bold;
 }
 
 /* --- 【個別】空室カレンダーボタン（枠線） --- */
 .headerActions .btnCalendar {
-  border: 1px solid #ffffff; /* 白い枠線 */
-  color: #ffffff;
-  background-color: transparent; /* 背景は透明 */
+    border: 1px solid #ffffff;
+    /* 白い枠線 */
+    color: #ffffff;
+    background-color: transparent;
+    /* 背景は透明 */
 }
 
 /* ヘッダーの設定（重なりの順序を確認） */
 .siteHeader {
-  background-color: rgba(0, 0, 0, 0.8); /* 画像を見せるために少し透明度を上げると綺麗です */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* 画像より上にくるように大きな数値を指定 */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 画像を見せるために少し透明度を上げると綺麗です */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* 画像より上にくるように大きな数値を指定 */
 }
 
 /* 1. 親要素：ここを座標の「0」の地点にする */
 .mainVisual {
-  position: relative; 
-  width: 100%;
-  aspect-ratio: 100dvh; /* 画面サイズぴったしに表示する */
+    position: relative;
+    width: 100%;
+    aspect-ratio: 100dvh;
+    /* 画面サイズぴったしに表示する */
 }
 
 /* 2. 背景画像 */
 .mainVisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* --- メインビジュアル内のロゴ・タイトル調整 --- */
 
 .mainTitle {
-  position: absolute;
-  /* top: 150px; を少し調整して、画面中央付近に配置 */
-  top: 55%; 
-  left: 10%; /* 左端から少し離す */
-  transform: translateY(-50%); /* 縦方向の真ん中合わせ */
-  
-  z-index: 10;
-  
-  /* 視認性を上げるための処理（任意） */
-  filter: drop-shadow(0 0 15px rgba(0,0,0,0.3));
+    position: absolute;
+    /* top: 150px; を少し調整して、画面中央付近に配置 */
+    top: 55%;
+    left: 10%;
+    /* 左端から少し離す */
+    transform: translateY(-50%);
+    /* 縦方向の真ん中合わせ */
+
+    z-index: 10;
+
+    /* 視認性を上げるための処理（任意） */
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
 }
 
 .mainTitle img {
-  width: 100%;
-  height: auto;
-  /* 画像がボケないように最適化 */
-  image-rendering: -webkit-optimize-contrast;
+    width: 100%;
+    height: auto;
+    /* 画像がボケないように最適化 */
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .mainSection {
-  background-image: url("../image/main_bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-color: #000;
-  
-  /* 画面全体のレイアウト設定 */
-  display: flex;
-  flex-direction: column; /* 縦書き(上)と横書き(下)を並べる */
-  justify-content: center; /* 垂直方向の中央寄せ */
-  align-items: center;     /* 水平方向の中央寄せ */
-  gap: 80px;
-  min-height: 100vh;       /* 画面いっぱいの高さを確保 */
-  padding: 150px 100px;     /* 上下にしっかり余白をとる */
-  box-sizing: border-box;
+    background-image: url("../image/main_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+
+    /* 画面全体のレイアウト設定 */
+    display: flex;
+    flex-direction: column;
+    /* 縦書き(上)と横書き(下)を並べる */
+    justify-content: center;
+    /* 垂直方向の中央寄せ */
+    align-items: center;
+    /* 水平方向の中央寄せ */
+    gap: 80px;
+    min-height: 100vh;
+    /* 画面いっぱいの高さを確保 */
+    padding: 150px 100px;
+    /* 上下にしっかり余白をとる */
+    box-sizing: border-box;
 }
 
 /* 縦文字エリア（上の大きな文字） */
 .conceptMessage {
-  color: #fff;
-  writing-mode: vertical-rl;
-  font-family: "serif";
-  font-size: 40px;      /* 画像に合わせて大きめに設定 */
-  line-height: 2.0;     /* 三行の間隔を調整 */
-  letter-spacing: 0.3em; /* 文字の上下の間隔をあけてゆったりと */
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    color: #fff;
+    writing-mode: vertical-rl;
+    font-family: "serif";
+    font-size: 40px;
+    /* 画像に合わせて大きめに設定 */
+    line-height: 2.0;
+    /* 三行の間隔を調整 */
+    letter-spacing: 0.3em;
+    /* 文字の上下の間隔をあけてゆったりと */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* 横書き説明文（下の小さな文字） */
 .descriptionMessage {
-  color: #fff;
-  font-family: "serif";
-  font-size: 15px;      /* 縦書きに対して小さく設定 */
-  line-height: 2.5;     /* 行間を広げて読みやすく */
-  text-align: center;   /* 中央揃え */
-  
-  max-width: 900px;     /* 横幅を広めにとって1行を長くする */
+    color: #fff;
+    font-family: "serif";
+    font-size: 15px;
+    /* 縦書きに対して小さく設定 */
+    line-height: 2.5;
+    /* 行間を広げて読みやすく */
+    text-align: center;
+    /* 中央揃え */
+
+    max-width: 900px;
+    /* 横幅を広めにとって1行を長くする */
 }
 
 .descriptionMessage p {
-  margin: 0;            /* デフォルトの余白をリセット */
+    margin: 0;
+    /* デフォルトの余白をリセット */
 }
+
 /* 外側の親要素（ページ全体や大きなセクション） */
 .parentContainer {
-  width: 100%;
-  /* 上から1355pxの位置に配置するためにpaddingを使う */
-  padding-top: 1355px;
-  /* 左から218.12pxの位置に寄せるためにpaddingを使う */
-  padding-left: 218.12px;
-  
-  box-sizing: border-box; /* paddingが外側に突き出さないようにする */
+    width: 100%;
+    /* 上から1355pxの位置に配置するためにpaddingを使う */
+    padding-top: 1355px;
+    /* 左から218.12pxの位置に寄せるためにpaddingを使う */
+    padding-left: 218.12px;
+
+    box-sizing: border-box;
+    /* paddingが外側に突き出さないようにする */
 }
 
 /* 1. 大きな航空写真のコンテナ */
 .mainPhotoContainer {
-  width: 100%;
-  max-width: 1177px;      /* 大きさは元のままキープ */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 1177px;
+    /* 大きさは元のままキープ */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* 航空写真自体（前回のまま） */
+/* 航空写真自体 */
 .mainPhoto {
-  object-fit: cover;
+    object-fit: cover;
 }
 
 /* 2. 下部の小さな画像・ロゴエリアのコンテナ（Flexboxで横並び） */
 .mediaLogosContainer {
-  display: flex;
-  justify-content: center; /* 中央寄せ */
-  width: 100%;
-  max-width: 400px;        /* コンパクトにまとめる */
+    display: flex;
+    justify-content: center;
+    /* 中央寄せ */
+    width: 100%;
+    max-width: 400px;
+    /* コンパクトにまとめる */
 }
 
 /* 小さな画像（Youtubeサムネイル画像）のコンテナ */
 .smallImagePreview {
-  width: 200px;           /* 小さく設定（画像2.pngの比率） */
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 小さな影 */
-  /* transitionやcursorは、リンクにしないなら不要 */
+    width: 200px;
+    /* 小さく設定（画像2.pngの比率） */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* 小さな影 */
+    /* transitionやcursorは、リンクにしないなら不要 */
 }
+
 .newsSection {
-    background-color: #ffffff; /* ここから白背景 */
+    background-color: #ffffff;
+    /* ここから白背景 */
     padding: 100px 20px;
     color: #333;
 }
 
 .newsInner {
-    max-width: 1000px; /* リストの最大横幅 */
-    width: 100%;       /* 画面が狭くなったとき用の横幅100% */
-    margin: 0 auto;    /* 💡超重要：これでリスト全体が画面の「真ん中」に配置されます */
+    max-width: 1000px;
+    /* リストの最大横幅 */
+    width: 100%;
+    /* 画面が狭くなったとき用の横幅100% */
+    margin: 0 auto;
+    /* 💡超重要：これでリスト全体が画面の「真ん中」に配置されます */
     display: flex;
     flex-direction: column;
 }
 
 /* タイトル部分 */
 .newsTitle {
-    text-align: center; 
+    text-align: center;
     font-family: "serif";
     font-size: 32px;
     margin-bottom: 60px;
@@ -308,8 +352,10 @@ table {
 
 /* リスト部分 */
 .newsList {
-    list-style: none;         /* 💡念のため、箇条書きの「・」を消す設定を追加 */
-    padding: 0;               /* 💡ブラウザのデフォルト余白をリセット */
+    list-style: none;
+    /* 念のため、箇条書きの「・」を消す設定を追加 */
+    padding: 0;
+    /* ブラウザのデフォルト余白をリセット */
     margin: 0;
     border-top: 1px solid #e0e0e0;
 }
@@ -320,10 +366,13 @@ table {
 
 .newsList a {
     display: flex;
-    align-items: center; /* 上下中央揃え */
-    padding: 24px 10px;  /* 💡お手本画像に合わせて、上下の余白を少し広げると高級感が出ます */
-    text-decoration: none; /* 💡リンクの下線を消す設定を追加 */
-    color: #333;         /* 💡リンクの文字色を固定 */
+    align-items: center;
+    /* 上下中央揃え */
+    padding: 24px 10px;
+    text-decoration: none;
+    /* リンクの下線を消す設定を追加 */
+    color: #333;
+    /* リンクの文字色を固定 */
     transition: background 0.3s;
 }
 
@@ -333,12 +382,14 @@ table {
 
 /* カテゴリ（緑のバッジ） */
 .newsCategory {
-    background-color: #78781E; /* つつじ亭カラー */
+    background-color: #78781E;
+    /* つつじ亭カラー */
     color: #fff;
     font-size: 12px;
     padding: 4px 15px;
-    width: 100px;       /* 💡min-widthよりwidth固定の方がバッジの幅が綺麗に揃います */
-    box-sizing: border-box; /* 💡パディングを含めた幅計算にする */
+    width: 100px;
+    box-sizing: border-box;
+    /* パディングを含めた幅計算にする */
     text-align: center;
     margin-right: 40px;
 }
@@ -364,16 +415,20 @@ table {
 .newsMore a {
     font-size: 14px;
     color: #666;
-    text-decoration: none; /* 💡リンクの下線を消す */
+    text-decoration: none;
+    /* リンクの下線を消す */
     transition: color 0.3s;
 }
 
 .newsMore a:hover {
     color: #78781E;
 }
+
 .planSection {
-    background-color: #e8e7e2; /* 画像のような薄いベージュ背景 */
-    padding: 100px 0 0; /* 下のボタンまで繋げるため下パディングは0 */
+    background-color: #e8e7e2;
+    /* 画像のような薄いベージュ背景 */
+    padding: 100px 0 0;
+    /* 下のボタンまで繋げるため下パディングは0 */
     margin-bottom: 15px;
 }
 
@@ -390,6 +445,7 @@ table {
     font-size: 32px;
     margin-bottom: 60px;
 }
+
 .planTitle span {
     display: block;
     font-size: 14px;
@@ -404,30 +460,36 @@ table {
     gap: 40px;
     margin-bottom: 80px;
 }
+
 .planCard {
     background: #fff;
     flex: 1;
 }
+
 .planImage img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+
 .planContent {
     padding: 25px;
 }
+
 .planContent h3 {
     font-size: 16px;
     color: #78781E;
     margin-bottom: 15px;
     line-height: 1.6;
 }
+
 .planContent p {
     font-size: 13px;
     line-height: 1.8;
     margin-bottom: 20px;
     color: #444;
 }
+
 .planLink {
     display: block;
     text-align: right;
@@ -440,6 +502,7 @@ table {
     text-align: center;
     padding-bottom: 80px;
 }
+
 .reserveCatch {
     font-size: 20px;
     color: #78781E;
@@ -449,17 +512,20 @@ table {
     padding: 15px 40px;
     margin-bottom: 30px;
 }
+
 .reserveText {
     font-size: 15px;
     line-height: 2;
     margin-bottom: 30px;
 }
+
 .reserveNote {
     font-size: 11px;
     color: #777;
     line-height: 1.8;
     text-align: left;
-    display: inline-block; /* 中央に寄せつつ左揃え */
+    display: inline-block;
+    /* 中央に寄せつつ左揃え */
 }
 
 /* 下部アクションエリア */
@@ -467,16 +533,19 @@ table {
     display: flex;
     height: 120px;
 }
-/* 💡 2つのボタンを横並びにして画面いっぱいに広げる親要素（もし無ければ追加してください） */
+
+/*2つのボタンを横並びにして画面いっぱいに広げる親要素 */
 .footerButtonsContainer {
     display: flex;
     width: 100%;
-    height: 140px; /* 💡 画像に合わせた、押しやすい高級感のある高さ */
+    height: 140px;
+    /* 画像に合わせた、押しやすい高級感のある高さ */
 }
 
 /* --- 左側：宿泊プラン一覧ボタン --- */
 .btnPlanList {
-    background-color: #78781E; /* つつじ亭カラー */
+    background-color: #78781E;
+    /* つつじ亭カラー */
     color: #fff;
     flex: 1;
     display: flex;
@@ -491,33 +560,35 @@ table {
 
 /* 上の小さな文字 */
 .btnPlanList span {
-    font-size: 10px;             /* 💡 画像に合わせて少し小さく上品に */
+    font-size: 10px;
     letter-spacing: 0.05em;
-    margin-bottom: 12px;         /* 💡 下のメイン文字との間隔を少しあける */
+    margin-bottom: 12px;
+    /*下のメイン文字との間隔を少しあける */
     opacity: 0.9;
     font-family: sans-serif;
 }
 
 /* メインの文字（宿泊プラン一覧はこちら） */
-.btnPlanList h3, 
-.btnPlanList { 
-    font-size: 28px;             /* 💡 ドンと見栄えのする大きさに変更 */
-    font-family: "serif";        /* つつじ亭の雰囲気に合わせた明朝体 */
+.btnPlanList h3,
+.btnPlanList {
+    font-size: 28px;
+    font-family: "serif";
+    /* つつじ亭の雰囲気に合わせた明朝体 */
     letter-spacing: 0.08em;
     margin: 0;
     font-weight: normal;
 }
 
-.btnPlanList:hover { 
-    opacity: 0.9; 
+.btnPlanList:hover {
+    opacity: 0.9;
 }
 
 
-/* --- 右側：お電話案内エリア（レイアウト崩れ修正版） --- */
+/* --- 右側：お電話案内エリア --- */
 .telInfo {
     background-color: #444;
     color: #fff;
-    flex: 1;                 /* 💡これで左右50%ずつの綺麗な等幅に戻ります */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -527,7 +598,7 @@ table {
 }
 
 /* 上の小さな文字（お問い合わせはこちら） */
-.telInfo > span { 
+.telInfo>span {
     font-size: 11px;
     letter-spacing: 0.05em;
     margin-bottom: 12px;
@@ -536,9 +607,9 @@ table {
 }
 
 /* 下の電話番号全体 */
-.telNumber { 
+.telNumber {
     font-size: 32px;
-    font-family: sans-serif; /* 💡左側と同じゴシック体に統一 */
+    font-family: sans-serif;
     letter-spacing: 0.05em;
     font-weight: 500;
     margin: 0;
@@ -556,12 +627,10 @@ table {
 .mainContents {
     display: flex;
     flex-direction: column;
-    gap: 15px;            /* 💡これでセクション同士の間にだけ、正確に15pxの隙間が空きます */
-    background-color: #e8e7e2; /* 💡【超重要】隙間から白い裏地が見えないよう、同じ背景色を敷きます */
+    gap: 15px;
+    /* これでセクション同士の間にだけ、正確に15pxの隙間が空きます */
 }
-/* ==========================================
-   「庭（Nature）」セクションの完全修正版コード
-========================================== */
+
 
 /* 1. 庭セクション全体の土台（間や食と見た目を揃える） */
 .natureSection {
@@ -571,13 +640,14 @@ table {
 
 /* 2. 画像と文字を重ね合わせるための設定 */
 .natureInner {
-    max-width: 100%; 
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    
+
     display: grid;
-    grid-template-areas: "overlap"; /* 重ね合わせエリアの名前を定義 */
+    grid-template-areas: "overlap";
+    /* 重ね合わせエリアの名前を定義 */
 }
 
 /* 3. 画像を配置 */
@@ -590,42 +660,54 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+    filter: brightness(0.7);
+    /* 文字を見えやすくするために少し暗く */
 }
 
 /* 4. 文字エリアを画像の上に完全に重ねる */
 .natureContent {
     grid-area: overlap;
-    
+
     /* 上下左右の真ん中に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
     color: #fff;
-    z-index: 2; /* 画像より上にくるように */
+    z-index: 2;
+    /* 画像より上にくるように */
 }
 
 /* 「庭 Nature」の文字の見た目 */
 .natureTitle {
     font-family: "serif";
-    font-size: 56px;          /* 「庭」のサイズ（太く、大きく） */
-    font-weight: bold;        /* しっかり太く */
-    line-height: 1.1;         /* 上下の文字間隔を程よく詰める */
+    font-size: 56px;
+    /* 「庭」のサイズ（太く、大きく） */
+    font-weight: bold;
+    /* しっかり太く */
+    line-height: 1.1;
+    /* 上下の文字間隔を程よく詰める */
     letter-spacing: 0.1em;
     text-align: center;
-    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
+    margin-bottom: 25px;
+    /* 下のキャッチコピーとの間隔 */
 }
 
 .natureTitle span {
-    display: block;           /* 必ず「庭」の下に改行して落とす */
-    font-size: 28px;          /* 「Nature」のサイズ */
-    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
-    font-weight: normal;      /* Natureは細めにして上品に */
-    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
-    margin-top: 10px;         /* 「庭」との間の微調整 */
+    display: block;
+    /* 必ず「庭」の下に改行して落とす */
+    font-size: 28px;
+    /* 「Nature」のサイズ */
+    font-family: "serif";
+    /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;
+    /* Natureは細めにして上品に */
+    letter-spacing: 0.2em;
+    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;
+    /* 「庭」との間の微調整 */
 }
 
 /* 下のキャッチコピー */
@@ -634,21 +716,24 @@ table {
     font-family: sans-serif;
     letter-spacing: 0.15em;
     font-weight: 500;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* 白文字が背景に溶けないように影をつける */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* 白文字が背景に溶けないように影をつける */
 }
+
 .RoomSection {
     background-color: #ffffff;
 }
 
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .RoomInner {
-    max-width: 100%; 
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    
+
     display: grid;
-    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+    grid-template-areas: "overlap";
+    /* 「overlap」という重ね合わせエリアを定義 */
 }
 
 /* 2. 画像をグリッドの「overlap」エリアに配置 */
@@ -661,45 +746,53 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+    filter: brightness(0.7);
+    /* 文字を見えやすくするために少し暗く */
 }
 
 /* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
 .RoomContent {
     grid-area: overlap;
-    
+
     /* Gridの機能を使って、上下左右の真ん中に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
     color: #fff;
-    z-index: 2; /* 画像より上にくるように */
+    z-index: 2;
+    /* 画像より上にくるように */
 }
 
 /* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
 .RoomTitle {
     font-family: "serif";
-    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
-    font-weight: bold;        /* しっかり太く */
-    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    font-size: 56px;
+    /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;
+    /* しっかり太く */
+    line-height: 1.1;
+    /* 「間」と「Room」の上下の間隔を程よく詰める */
     letter-spacing: 0.1em;
     text-align: center;
-    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
-
-    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+    margin-bottom: 25px;
+    /* 下のキャッチコピーとの間隔 */
 }
 
 /* 下の「Room」の部分 */
 .RoomTitle span {
-    display: block;           /* 💡 必ず「間」の下に改行して落とす */
-    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
-    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
-    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
-    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
-    margin-top: 10px;         /* 「間」との間の微調整 */
+    display: block;
+    /* 「間」の下に改行して落とす */
+    font-size: 28px;
+    font-family: "serif";
+    /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;
+    /* 「間」との間の微調整 */
 }
 
 /* 下のキャッチコピー */
@@ -708,20 +801,23 @@ table {
     font-family: "sans-serif";
     letter-spacing: 0.15em;
     font-weight: 500;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .FoodSection {
     background-color: #ffffff;
 }
+
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .FoodInner {
-    max-width: 100%; 
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    
+
     display: grid;
-    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+    grid-template-areas: "overlap";
+    /* 「overlap」という重ね合わせエリアを定義 */
 }
 
 /* 2. 画像をグリッドの「overlap」エリアに配置 */
@@ -734,45 +830,53 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+    filter: brightness(0.7);
+    /* 文字を見えやすくするために少し暗く */
 }
 
 /* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
 .FoodContent {
     grid-area: overlap;
-    
+
     /* Gridの機能を使って、上下左右の真ん中に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
     color: #fff;
-    z-index: 2; /* 画像より上にくるように */
+    z-index: 2;
+    /* 画像より上にくるように */
 }
 
 /* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
 .FoodTitle {
     font-family: "serif";
-    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
-    font-weight: bold;        /* しっかり太く */
-    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    font-size: 56px;
+    /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;
+    /* しっかり太く */
+    line-height: 1.1;
+    /* 「間」と「Room」の上下の間隔を程よく詰める */
     letter-spacing: 0.1em;
     text-align: center;
-    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
-
-    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+    margin-bottom: 25px;
+    /* 下のキャッチコピーとの間隔 */
 }
 
 /* 下の「Room」の部分 */
 .FoodTitle span {
-    display: block;           /* 💡 必ず「間」の下に改行して落とす */
-    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
-    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
-    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
-    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
-    margin-top: 10px;         /* 「間」との間の微調整 */
+    display: block;
+    /*「間」の下に改行して落とす */
+    font-size: 28px;
+    font-family: "serif";
+    /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;
+    /* 「間」との間の微調整 */
 }
 
 /* 下のキャッチコピー */
@@ -781,20 +885,23 @@ table {
     font-family: "sans-serif";
     letter-spacing: 0.15em;
     font-weight: 500;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 .OnsenSection {
     background-color: #ffffff;
 }
+
 /* 1. ここをGridに変更して、重ね合わせる舞台を作ります */
 .OnsenInner {
-    max-width: 100%; 
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    
+
     display: grid;
-    grid-template-areas: "overlap"; /* 「overlap」という重ね合わせエリアを定義 */
+    grid-template-areas: "overlap";
+    /* 「overlap」という重ね合わせエリアを定義 */
 }
 
 /* 2. 画像をグリッドの「overlap」エリアに配置 */
@@ -807,45 +914,53 @@ table {
     height: 500px;
     object-fit: cover;
     display: block;
-    filter: brightness(0.7); /* 文字を見えやすくするために少し暗く */
+    filter: brightness(0.7);
+    /* 文字を見えやすくするために少し暗く */
 }
 
 /* 3. 文字エリアも同じ「overlap」エリアに配置して重ねる */
 .OnsenContent {
     grid-area: overlap;
-    
+
     /* Gridの機能を使って、上下左右の真ん中に配置 */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
     color: #fff;
-    z-index: 2; /* 画像より上にくるように */
+    z-index: 2;
+    /* 画像より上にくるように */
 }
 
-/* 「間 Room」のタイトルエリア（修正版：正解の縦並び） */
+/* 「間 Room」のタイトルエリア */
 .OnsenTitle {
     font-family: "serif";
-    font-size: 56px;          /* 「間」のサイズ（太く、大きく） */
-    font-weight: bold;        /* しっかり太く */
-    line-height: 1.1;         /* 「間」と「Room」の上下の間隔を程よく詰める */
+    font-size: 56px;
+    /* 「間」のサイズ（太く、大きく） */
+    font-weight: bold;
+    /* しっかり太く */
+    line-height: 1.1;
+    /* 「間」と「Room」の上下の間隔を程よく詰める */
     letter-spacing: 0.1em;
     text-align: center;
-    margin-bottom: 25px;      /* 下のキャッチコピーとの間隔 */
-
-    /* 💡 横並びにする設定（display: flexなど）は一切入れない */
+    margin-bottom: 25px;
+    /* 下のキャッチコピーとの間隔 */
 }
 
 /* 下の「Room」の部分 */
 .OnsenTitle span {
-    display: block;           /* 💡 必ず「間」の下に改行して落とす */
-    font-size: 28px;          /* 「Room」のサイズ（正解画像に合わせて少し控えめに） */
-    font-family: "serif";     /* 綺麗な明朝・セリフ体 */
-    font-weight: normal;      /* 💡 正解画像のように、Roomは「細め」にする */
-    letter-spacing: 0.2em;    /* 文字の間隔を少し広げて上品に */
-    margin-top: 10px;         /* 「間」との間の微調整 */
+    display: block;
+    /* 「間」の下に改行して落とす */
+    font-size: 28px;
+    font-family: "serif";
+    /* 綺麗な明朝・セリフ体 */
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    /* 文字の間隔を少し広げて上品に */
+    margin-top: 10px;
+    /* 「間」との間の微調整 */
 }
 
 /* 下のキャッチコピー */
@@ -854,20 +969,21 @@ table {
     font-family: "sans-serif";
     letter-spacing: 0.15em;
     font-weight: 500;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-/* 💡ここを新しく追加します（他の箇所はいじりません） */
+
 .accessSection {
-    background-color: #ffffff; /* 👈 マップエリアの背景を真っ白に塗りつぶして、上の薄グレーを遮断します */
-    padding: 60px 0;           /* 上下の程よい余白（お好みの広さに調整してOKです） */
+    background-color: #ffffff;
 }
+
 .accessInner {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* マップ画像とボタンの間の隙間 */
+    gap: 30px;
+    /* マップ画像とボタンの間の隙間 */
 }
 
 /* マップ画像エリア */
@@ -877,16 +993,19 @@ table {
 
 .accessMap img {
     width: 100%;
-    height: auto;      /* 画像の比率を保ったまま綺麗に拡大縮小 */
+    height: auto;
+    /* 画像の比率を保ったまま綺麗に拡大縮小 */
     display: block;
 }
 
 /* ボタンを横並びにするエリア */
 .accessButtons {
     display: flex;
-    justify-content: center; /* ボタンを中央寄せ */
+    justify-content: center;
+    /* ボタンを中央寄せ */
     align-items: center;
-    gap: 20px; /* ボタン同士の隙間 */
+    gap: 20px;
+    /* ボタン同士の隙間 */
     width: 100%;
 }
 
@@ -909,6 +1028,7 @@ table {
     color: #fff;
     width: 240px;
 }
+
 .btnDetail:hover {
     background-color: #999999;
 }
@@ -919,13 +1039,18 @@ table {
     color: #fff;
     width: 240px;
 }
+
 .btnMapOpen:hover {
     background-color: #000000;
 }
- .footerWrap {
+
+.siteFooter {
+    margin-top: 150px;
+}
+
+.footerWrap {
     display: flex;
     justify-content: space-around;
-    margin-top: 150px;
 }
 
 .footerLogo {
@@ -943,34 +1068,48 @@ table {
     font-size: 14px;
     line-height: 2.5;
 }
+
 .footerNavigation ul {
-  display: flex;           /* 横並びにする */
-  list-style: none;        /* 文頭の ● を消す */
-  margin: 100px;
-  padding: 0;
-  gap: 40px;               /* 文字同士の間隔 */
-  justify-content: center; /* 中央揃え（左寄せの場合は flex-start） */
+    display: flex;
+    /* 横並びにする */
+    list-style: none;
+    /* 文頭の ● を消す */
+    margin: 100px;
+    padding: 0;
+    gap: 40px;
+    /* 文字同士の間隔 */
+    justify-content: center;
+    /* 中央揃え（左寄せの場合は flex-start） */
 
 }
 
 .footerNavigation a {
-  color: #222222; /* 文字の色を白にする */
-  text-decoration: none;    /* 下線を消す */
-  font-size: 15px;          /* 文字の大きさ */
-  font-weight: 500;         /* 文字の太さを少し出す */
-  transition: color 0.3s;   /* マウスを乗せた時の変化を滑らかに */
+    color: #222222;
+    /* 文字の色を白にする */
+    text-decoration: none;
+    /* 下線を消す */
+    font-size: 15px;
+    /* 文字の大きさ */
+    font-weight: 500;
+    /* 文字の太さを少し出す */
+    transition: color 0.3s;
+    /* マウスを乗せた時の変化を滑らかに */
 }
+
 .footerlink ul {
-  display: flex;           /* 横並びにする */
-  margin: 10px;
-  padding: 0;
-  gap: 40px;              
-  justify-content: center; /* 中央揃え（左寄せの場合は flex-start） */
+    display: flex;
+    /* 横並びにする */
+    margin: 10px;
+    padding: 0;
+    gap: 40px;
+    justify-content: center;
+    /* 中央揃え（左寄せの場合は flex-start） */
 
 }
-.footerlast{
-  margin: 50px;
-  font-size: 10px;
-  text-align: center;
+
+.footerlast {
+    margin: 50px;
+    font-size: 10px;
+    text-align: center;
 
 }
